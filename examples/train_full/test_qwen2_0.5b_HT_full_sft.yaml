@@ -53,7 +53,7 @@ gradient_checkpointing: true         # 大幅省显存，训练略慢
 # attn_implementation: sdpa            # 本地不强求 flash-attn；装好了再改为 flash_attention_2
 ddp_timeout: 180000000
 resume_from_checkpoint: null
-flash_attn: true
+flash_attn: fa2
 
 # ===== eval（建议留一点验证，监控过拟合） =====
 # val_size: 0.02
