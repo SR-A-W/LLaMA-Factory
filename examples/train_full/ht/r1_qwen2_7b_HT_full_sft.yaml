@@ -23,7 +23,7 @@ preprocessing_num_workers: 16
 dataloader_num_workers: 4
 
 ### output
-output_dir: saves/qwen2_5vl-7b/full/sft
+output_dir: saves/ht/r1-qwen2_5vl-7b
 save_only_model: true 
 logging_steps: 1
 save_steps: 300
