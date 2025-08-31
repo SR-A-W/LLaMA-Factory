@@ -24,7 +24,7 @@ dataloader_num_workers: 4
 default_system: ""
 
 ### output
-output_dir: saves/ht/r1-qwen2_5vl-7b
+output_dir: saves/ht/r1-qwen2_5vl-7b-no_think_only
 save_only_model: true 
 logging_steps: 1
 save_steps: 500
