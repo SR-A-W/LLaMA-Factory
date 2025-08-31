@@ -4,7 +4,7 @@
     "formatting": "sharegpt",
     "columns": {
       "messages": "conversations",
-      "system": "system"
+      "system": null
     },
     "tags": {
       "role_tag": "from",
@@ -18,7 +18,7 @@
     "formatting": "sharegpt",
     "columns": {
       "messages": "conversations",
-      "system": "system"
+      "system": null
     },
     "tags": {
       "role_tag": "from",
@@ -32,7 +32,7 @@
     "formatting": "sharegpt",
     "columns": {
       "messages": "conversations",
-      "system": "system"
+      "system": null
     },
     "tags": {
       "role_tag": "from",
