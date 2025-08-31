@@ -14,7 +14,7 @@ freeze_language_model: false
 deepspeed: examples/deepspeed/ds_z3_config.json
 
 ### dataset
-dataset: hybrid_thinking_demo
+dataset: hybrid_thinking_demo_no_think_only
 template: qwen25
 cutoff_len: 16384
 max_samples: 100000000

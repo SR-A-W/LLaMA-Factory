@@ -1,6 +1,6 @@
 {
   "hybrid_thinking_demo": {
-    "file_name": "demo_hybrid_thinking_no_duplicates.jsonl",
+    "file_name": "demo_hybrid_thinking.jsonl",
     "formatting": "sharegpt",
     "columns": {
       "messages": "conversations",
@@ -15,6 +15,20 @@
   },
   "hybrid_thinking_demo_think_only": {
     "file_name": "demo_think_only.jsonl",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "system": "system"
+    },
+    "tags": {
+      "role_tag": "from",
+      "content_tag": "value",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "hybrid_thinking_demo_no_think_only": {
+    "file_name": "demo_no_think_only.jsonl",
     "formatting": "sharegpt",
     "columns": {
       "messages": "conversations",
