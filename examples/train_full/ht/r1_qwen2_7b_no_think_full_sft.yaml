@@ -32,7 +32,7 @@ plot_loss: true
 overwrite_output_dir: false
 # save_only_model: false
 report_to: wandb  # choices: [none, wandb, tensorboard, swanlab, mlflow]
-run_name: HT_R1-Qwen2.5-7B
+run_name: HT_R1-Qwen2.5-7B_no_think_only
 
 ### train
 per_device_train_batch_size: 1
