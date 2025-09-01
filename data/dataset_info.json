@@ -41,6 +41,34 @@
       "assistant_tag": "assistant"
     }
   },
+  "hybrid_thinking_demo_phase1": {
+    "file_name": "demo_ht_phase1.jsonl",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "system": null
+    },
+    "tags": {
+      "role_tag": "from",
+      "content_tag": "value",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "hybrid_thinking_demo_phase2": {
+    "file_name": "demo_ht_phase2.jsonl",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "system": null
+    },
+    "tags": {
+      "role_tag": "from",
+      "content_tag": "value",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
   "identity": {
     "file_name": "identity.json"
   },
