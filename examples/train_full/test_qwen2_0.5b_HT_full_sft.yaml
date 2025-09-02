@@ -54,7 +54,8 @@ gradient_checkpointing: true         # 大幅省显存，训练略慢
 ddp_timeout: 180000000
 resume_from_checkpoint: null
 flash_attn: fa2
-default_system: ""
+default_system: "You MUST obey the mode flag at the end of user’s message.\n- If the flag is /think, output exactly:\n<think>\n{YOUR REASONING}\n</think>\n{FINAL_ANSWER}\n- If the flag is /no_think, output exactly:\n<think>\n</think>\n{FINAL_ANSWER}\nRules: (1) In /no_think, the think block is exactly `<think></think>` — no spaces/newlines inside. (2) Never put reasoning outside <think>...</think>. (3) Always place the final answer after the think block."
+
 
 # ===== eval（建议留一点验证，监控过拟合） =====
 # val_size: 0.02
