@@ -83,6 +83,20 @@
       "assistant_tag": "assistant"
     }
   },
+  "hybrid_thinking_demo_phase2_duplicates_146k": {
+    "file_name": "demo_146k_duplicates.jsonl",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "system": null
+    },
+    "tags": {
+      "role_tag": "from",
+      "content_tag": "value",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
   "identity": {
     "file_name": "identity.json"
   },
