@@ -1,6 +1,6 @@
 # ===== model =====
 # 用 0.5B 纯文本指令版；若你已有本地路径，改成绝对路径即可
-model_name_or_path: /media/srw/data/LLMs/Qwen/Qwen2.5-0.5B
+model_name_or_path: ./saves/Qwen2.5-0.5B
 trust_remote_code: true
 
 # ===== method =====
