@@ -1,14 +1,14 @@
-# Experiment goal: Train a reasoning tuned Qwen model as phase 2 model. Use the 7/9 of 140k total samples(3/9 /think samples and 4/9 /no-think samples)
+# Experiment goal: Train a reasoning tuned Llama model as phase 2 model. Use the 7/9 of 80k total samples(3/9 /think samples and 4/9 /no-think samples)
 # Design & Settings:
-# 1. Model: Qwen2.5-7B-Instruct
+# 1. Model: Llama-3-8B-Instruct
 # 2. Training Mode: phase2 of 2-phase training
-# 3. Dataset: A /think-only dataset, from the 7/9 of 140k total samples(3/9 /think samples and 4/9 /no-think samples).
+# 3. Dataset: A /think-only dataset, from the 7/9 of 80k total samples(3/9 /think samples and 4/9 /no-think samples).
 # 4. System prompt: empty string
 
 
 ### model
-model_name_or_path: ./saves/2phases/Qwen_phase1_140k
-# model_name_or_path: /scratch/pioneer/users/sxw992/hybrid-thinking-dataset/train/LLaMA-Factory/saves/2phases/Qwen_phase1_140k
+model_name_or_path: ./saves/2phases/Llama_phase1_80k
+# model_name_or_path: /scratch/pioneer/users/sxw992/hybrid-thinking-dataset/train/LLaMA-Factory/saves/2phases/Llama_phase2_80k
 # image_max_pixels: 262144
 # video_max_pixels: 16384
 # trust_remote_code: true
@@ -23,8 +23,8 @@ freeze_language_model: false
 deepspeed: examples/deepspeed/ds_z3_config.json
 
 ### dataset
-dataset: phase2_140k
-template: qwen25
+dataset: phase2_80k
+template: llama3
 cutoff_len: 16384
 max_samples: 100000000
 overwrite_cache: true
@@ -34,7 +34,7 @@ default_system: ""
 
 
 ### output
-output_dir: saves/2phases/Qwen_phase2_140k
+output_dir: saves/2phases/Llama_phase2_80k
 save_only_model: true 
 logging_steps: 1
 save_steps: 5000
@@ -42,7 +42,7 @@ plot_loss: true
 overwrite_output_dir: false
 # save_only_model: false
 report_to: wandb  # choices: [none, wandb, tensorboard, swanlab, mlflow]
-run_name: 2phases_Qwen_phase2_140k
+run_name: 2phases_Llama_phase2_80k
 
 ### train
 per_device_train_batch_size: 1

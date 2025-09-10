@@ -7,7 +7,8 @@
 
 
 ### model
-model_name_or_path: /scratch/pioneer/users/sxw992/hybrid-thinking-dataset/train/LLaMA-Factory/saves/2phases/Qwen_phase1_20k
+model_name_or_path: ./saves/2phases/Qwen_phase1_20k
+# model_name_or_path: /scratch/pioneer/users/sxw992/hybrid-thinking-dataset/train/LLaMA-Factory/saves/2phases/Qwen_phase1_20k
 # image_max_pixels: 262144
 # video_max_pixels: 16384
 # trust_remote_code: true
