@@ -111,7 +111,7 @@
       "assistant_tag": "assistant"
     }
   },
-  "navie-mix_20k": {
+  "naive-mix_20k": {
     "file_name": "20k_unsplited.jsonl",
     "formatting": "sharegpt",
     "columns": {
@@ -125,7 +125,7 @@
       "assistant_tag": "assistant"
     }
   },
-  "navie-mix_40k": {
+  "naive-mix_40k": {
     "file_name": "40k_unsplited.jsonl",
     "formatting": "sharegpt",
     "columns": {
@@ -139,7 +139,7 @@
       "assistant_tag": "assistant"
     }
   },
-  "navie-mix_80k": {
+  "naive-mix_80k": {
     "file_name": "80k_unsplited.jsonl",
     "formatting": "sharegpt",
     "columns": {
@@ -153,7 +153,7 @@
       "assistant_tag": "assistant"
     }
   },
-  "navie-mix_140k": {
+  "naive-mix_140k": {
     "file_name": "140k_unsplited.jsonl",
     "formatting": "sharegpt",
     "columns": {
