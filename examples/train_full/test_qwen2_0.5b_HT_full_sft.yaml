@@ -50,10 +50,8 @@ lr_scheduler_type: cosine
 warmup_ratio: 0.1
 bf16: true                           # 若显卡不支持 BF16，改为 fp16: true
 gradient_checkpointing: true         # 大幅省显存，训练略慢
-# attn_implementation: sdpa            # 本地不强求 flash-attn；装好了再改为 flash_attention_2
 ddp_timeout: 180000000
 resume_from_checkpoint: null
-# flash_attn: fa2
 default_system: "You MUST obey the mode flag at the end of user’s message.\n- If the flag is /think, output exactly:\n<think>\n{YOUR REASONING}\n</think>\n{FINAL_ANSWER}\n- If the flag is /no_think, output exactly:\n<think>\n</think>\n{FINAL_ANSWER}\nRules: (1) In /no_think, the think block is exactly `<think></think>` — no spaces/newlines inside. (2) Never put reasoning outside <think>...</think>. (3) Always place the final answer after the think block."
 
 
