@@ -17,7 +17,7 @@ freeze_language_model: false
 
 # ===== dataset =====
 # 指向你在 dataset_info.json 里定义的名称；并显式给出数据目录
-dataset: hybrid_thinking_demo
+dataset: naive-mix_20k
 # dataset_dir: /ABS/PATH/TO/data_dir   # <<< 改成你的数据根目录
 template: qwen25                      # Qwen2/2.5 纯文本模板名；不要写不存在的 qwen25
 
