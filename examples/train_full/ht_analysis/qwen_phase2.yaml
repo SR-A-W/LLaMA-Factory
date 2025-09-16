@@ -30,7 +30,7 @@ max_samples: 100000000
 overwrite_cache: true
 preprocessing_num_workers: 16
 dataloader_num_workers: 4
-default_system: ""
+default_system: "You MUST obey the mode flag at the end of user’s message.\n- If the flag is /think, output exactly:\n<think>\n{YOUR REASONING}\n</think>\n{FINAL_ANSWER}\n- If the flag is /no_think, output exactly:\n<think>\n</think>\n{FINAL_ANSWER}\nRules: (1) In /no_think, the think block is exactly `<think></think>` — no spaces/newlines inside. (2) Never put reasoning outside <think>...</think>. (3) Always place the final answer after the think block."
 
 
 ### output
