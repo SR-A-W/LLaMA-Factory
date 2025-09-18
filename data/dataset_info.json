@@ -28,7 +28,7 @@
     }
   },
   "ht-analysis_think_only": {
-    "file_name": "think_only.jsonl",
+    "file_name": "think-only.jsonl",
     "formatting": "sharegpt",
     "columns": {
       "messages": "conversations",
@@ -42,7 +42,7 @@
     }
   },
   "ht-analysis_no_think_only": {
-    "file_name": "no_think_only.jsonl",
+    "file_name": "no_think-only.jsonl",
     "formatting": "sharegpt",
     "columns": {
       "messages": "conversations",
