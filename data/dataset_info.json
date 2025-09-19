@@ -237,6 +237,20 @@
       "assistant_tag": "assistant"
     }
   },
+  "no_duplicate_20k": {
+    "file_name": "no_duplicate_20k.jsonl",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "system": null
+    },
+    "tags": {
+      "role_tag": "from",
+      "content_tag": "value",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
   "hybrid_thinking_demo": {
     "file_name": "demo_hybrid_thinking.jsonl",
     "formatting": "sharegpt",
