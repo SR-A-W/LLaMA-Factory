@@ -22,7 +22,7 @@ freeze_language_model: false
 deepspeed: examples/deepspeed/ds_z3_config.json
 
 ### dataset
-dataset: ht-analysis_phase1
+dataset: ht-analysis_phase2
 template: llama3
 cutoff_len: 16384
 max_samples: 100000000
