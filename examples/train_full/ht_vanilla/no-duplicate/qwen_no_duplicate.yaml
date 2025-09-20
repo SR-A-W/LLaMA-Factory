@@ -47,7 +47,7 @@ plot_loss: true
 overwrite_output_dir: false
 # save_only_model: false
 # NOTE:----------Double check this one!----------
-report_to: none  # choices: [none, wandb, tensorboard, swanlab, mlflow]
+report_to: wandb  # choices: [none, wandb, tensorboard, swanlab, mlflow]
 # NOTE:----------Double check this one!----------
 run_name: Qwen_no_duplicate
 
