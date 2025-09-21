@@ -251,6 +251,34 @@
       "assistant_tag": "assistant"
     }
   },
+  "no_duplicate_40k": {
+    "file_name": "no_duplicate_40k.jsonl",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "system": null
+    },
+    "tags": {
+      "role_tag": "from",
+      "content_tag": "value",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "no_duplicate_80k": {
+    "file_name": "no_duplicate_80k.jsonl",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "system": null
+    },
+    "tags": {
+      "role_tag": "from",
+      "content_tag": "value",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
   "ratio_1_4_80k": {
     "file_name": "ratio_1_4_80k.jsonl",
     "formatting": "sharegpt",
