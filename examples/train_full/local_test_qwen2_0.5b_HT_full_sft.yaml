@@ -1,0 +1,61 @@
+# ===== model =====
+# 用 0.5B 纯文本指令版；若你已有本地路径，改成绝对路径即可
+model_name_or_path: /media/srw/data/LLMs/Qwen/Qwen2.5-0.5B
+trust_remote_code: true
+
+# ===== method =====
+stage: sft
+do_train: true
+finetuning_type: full
+# 纯文本模型，无视觉塔/投影器；这些项删除或设成 false 以免混淆
+# freeze_vision_tower: false
+# freeze_multi_modal_projector: false
+freeze_language_model: false
+
+# 本地单卡先别用 deepspeed，简化依赖与日志；需要再开
+# deepspeed: examples/deepspeed/ds_z3_config.json
+
+# ===== dataset =====
+# 指向你在 dataset_info.json 里定义的名称；并显式给出数据目录
+dataset: hybrid_thinking_demo
+# dataset_dir: /ABS/PATH/TO/data_dir   # <<< 改成你的数据根目录
+template: qwen25                      # Qwen2/2.5 纯文本模板名；不要写不存在的 qwen25
+
+# 为了 16GB 稳定：2k~4k 起步；跑通后再逐级上调
+cutoff_len: 2048
+packing: false
+overwrite_cache: true
+preprocessing_num_workers: 4         # 本地先保守一点
+dataloader_num_workers: 2
+
+# === 只做本地冒烟，别把数据全读进来；确认流程后再删掉这行
+max_samples: 500
+
+# ===== output & logging =====
+output_dir: ./saves/qwen2_5-0.5b_full_local
+overwrite_output_dir: true           # 本地反复试验方便覆盖
+save_only_model: true                # 只存权重，省空间/IO
+logging_steps: 5
+save_steps: 200
+plot_loss: true
+report_to: none                      # 本地先关掉外部日志；需要时改 wandb
+run_name: qwen2_5-0.5b_full_local
+
+# ===== train =====
+per_device_train_batch_size: 1
+gradient_accumulation_steps: 4       # 有效BS≈4；OOM 就降到 2 或 1
+learning_rate: 1.5e-5                # 全参 SFT 稳妥范围 1e-5~2e-5
+num_train_epochs: 1.0                # 本地先 1 epoch 冒烟，确认能跑通
+lr_scheduler_type: cosine
+warmup_ratio: 0.05
+bf16: true                           # 若显卡不支持 BF16，改为 fp16: true
+gradient_checkpointing: true         # 大幅省显存，训练略慢
+# attn_implementation: sdpa            # 本地不强求 flash-attn；装好了再改为 flash_attention_2
+ddp_timeout: 180000000
+resume_from_checkpoint: null
+
+# ===== eval（建议留一点验证，监控过拟合） =====
+# val_size: 0.02
+# per_device_eval_batch_size: 1
+# evaluation_strategy: steps
+# eval_steps: 400
