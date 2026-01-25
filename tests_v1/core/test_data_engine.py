@@ -12,7 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import os
 import random
 
 import pytest
@@ -22,14 +21,11 @@ from llamafactory.v1.config.data_args import DataArguments
 from llamafactory.v1.core.data_engine import DataEngine
 
 
-TINY_DATA = os.getenv("TINY_DATA", "llamafactory/v1-sft-demo")
-
-
 @pytest.mark.parametrize("num_samples", [16])
 def test_map_dataset(num_samples: int):
-    data_args = DataArguments(dataset=TINY_DATA)
-    data_engine = DataEngine(data_args)
-    original_data = load_dataset(TINY_DATA, split="train")
+    data_args = DataArguments(train_dataset="llamafactory/v1-sft-demo")
+    data_engine = DataEngine(data_args.train_dataset)
+    original_data = load_dataset("llamafactory/v1-sft-demo", split="train")
     indexes = random.choices(range(len(data_engine)), k=num_samples)
     for index in indexes:
         print(data_engine[index])
@@ -37,4 +33,7 @@ def test_map_dataset(num_samples: int):
 
 
 if __name__ == "__main__":
+    """
+    python -m tests_v1.core.test_data_engine
+    """
     test_map_dataset(1)
