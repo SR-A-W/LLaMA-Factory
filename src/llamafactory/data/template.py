@@ -1912,6 +1912,17 @@ register_template(
     template_class=ReasoningTemplate,
 )
 
+register_template(
+    name="qwen25",
+    format_user=StringFormatter(slots=["<|im_start|>user\n{{content}}<|im_end|>\n<|im_start|>assistant\n"]),
+    format_system=StringFormatter(slots=["<|im_start|>system\n{{content}}<|im_end|>\n"]),
+    format_observation=StringFormatter(slots=["<|im_start|>tool\n{{content}}<|im_end|>\n<|im_start|>assistant\n"]),
+    # format_separator=EmptyFormatter(slots=["\n"]),
+    default_system="You are Qwen, created by Alibaba Cloud. You are a helpful assistant.",
+    stop_words=["<|endoftext|>"],
+    replace_eos=True,
+    replace_jinja_template=False,
+)
 
 register_template(
     name="qwen3_omni_nothink",
